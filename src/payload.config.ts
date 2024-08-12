@@ -12,10 +12,10 @@ import Page from './collections/Page';
 import Media from './collections/Media';
 import FormSubmission from './collections/FormSubmission';
 //import Study from './collections/Study';
-//import Category from './collections/Category';
-//import MegaMenu from './globals/MegaMenu';
-//import SocialMedia from './globals/SocialMedia';
-//import Footer from './globals/Footer';
+import Category from './collections/Category';
+import MegaMenu from './globals/MegaMenu';
+import SocialMedia from './globals/SocialMedia';
+import Footer from './globals/Footer';
 
 dotenv.config();
 
@@ -31,12 +31,12 @@ export default buildConfig({
     //Study,
     Media,
     FormSubmission,
-    //Category,
+    Category,
   ],
   globals: [
-   // MegaMenu,
-   // SocialMedia,
-   // Footer,
+    MegaMenu,
+    SocialMedia,
+    Footer,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
