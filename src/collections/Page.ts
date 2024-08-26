@@ -14,6 +14,7 @@ import MediaStatCollage, { Type as MediaStatCollageType } from '../blocks/MediaS
 import MediaGrid, { Type as MediaGridType } from '../blocks/MediaGrid';
 import MediaCollage, { Type as MediaCollageType } from '../blocks/MediaCollage';
 import CTAGrid, { Type as CTAGridType } from '../blocks/CTAGrid';
+import { slateEditor } from '@payloadcms/richtext-slate';
 
 export type Layout =
   CallToActionType
@@ -54,6 +55,16 @@ export const Page: CollectionConfig = {
       label: 'Page Title',
       type: 'text',
       required: true,
+    },
+    {
+      name: 'content',
+      type: 'richText',
+      editor: slateEditor({
+        admin: {
+          elements: [],
+          leaves: [],
+        }
+      }),
     },
     {
       type: 'radio',
