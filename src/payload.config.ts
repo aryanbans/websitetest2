@@ -39,6 +39,7 @@ export default buildConfig({
     Footer,
   ],
   typescript: {
+    declare: false,
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
   graphQL: {
